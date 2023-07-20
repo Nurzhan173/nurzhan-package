@@ -10,6 +10,7 @@ const requester = (url) => {
   }
 
   const { GET } = methodTypes;
+  const xhr = new XMLHttpRequest();
 
   return {
     get: () => {
