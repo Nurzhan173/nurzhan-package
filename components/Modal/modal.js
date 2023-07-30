@@ -1,11 +1,10 @@
 class Modal {
   constructor() {
     function closeModal() {
-      window.modal.style.display = 'none';
+      modal.style.display = 'none';
     }
 
     window.onclick = function(event) {
-
       if (event.target === modal) {
         window.modal.style.display = 'none';
       }
@@ -13,7 +12,7 @@ class Modal {
 
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") {
-        window.modal.style.display = 'none';
+        modal.style.display = 'none';
       }
     });
   }
@@ -27,6 +26,8 @@ class Modal {
     modal.className = "modal";
 
     cross.className="close";
+    cross.textContent = "x";
+
     modalContent.id = "modal-content";
     modalContent.className = "modal-content";
 
