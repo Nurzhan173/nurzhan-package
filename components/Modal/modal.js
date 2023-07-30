@@ -19,19 +19,22 @@ class Modal {
 
   render() {
     const modal = document.createElement("div");
-    const cross = document.createElement("span");
+    const closeButton = document.createElement("span");
     const modalContent = document.createElement("div");
 
     modal.id = "modal";
     modal.className = "modal";
 
-    cross.className="close";
-    cross.textContent = "x";
+    closeButton.className="close";
+    closeButton.textContent = "x";
+    closeButton.addEventListener("click", () => {
+      window.modal.style.display = 'none';
+    })
 
     modalContent.id = "modal-content";
     modalContent.className = "modal-content";
 
-    modal.appendChild(cross);
+    modal.appendChild(closeButton);
     modal.appendChild(modalContent);
 
     return modal;
