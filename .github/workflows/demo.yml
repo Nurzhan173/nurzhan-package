@@ -1,8 +1,10 @@
-name: Demo Workflow
-on: workflow_dispatch
+name: Demo-workflow
+on: 
+  workflow_dispatch:
+
 jobs: 
-  print: 
+  deploy: 
     runs-on: ubuntu-latest
     steps: 
-      - name: Print to console
-        run: echo Hello Actions
+      - run: echo "We did it!"
+ 
