@@ -1,10 +1,17 @@
 name: Demo-workflow
-on: 
-  workflow_dispatch:
+on:
+  push:
 
-jobs: 
-  deploy: 
+jobs:
+  deploy:
     runs-on: ubuntu-latest
-    steps: 
-      - run: echo "We did it!"
- 
+    steps:
+      - name: Get repo code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Test
+        run: npm run test
+
+
+
