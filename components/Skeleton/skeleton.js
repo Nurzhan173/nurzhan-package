@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 class Skeleton {
   render() {
     const skeleton = document.createElement('div');

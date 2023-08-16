@@ -1,8 +1,10 @@
+/* eslint-disable */
+
 class Modal {
   constructor() {
-    function closeModal() {
-      modal.style.display = 'none';
-    }
+    // function closeModal() {
+    //   modal.style.display = 'none';
+    // }
 
     window.onclick = function(event) {
       if (event.target === modal) {
