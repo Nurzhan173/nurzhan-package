@@ -19,8 +19,8 @@ jobs:
         run: npm ci
       - name: Lint application
         run: npm run test
-
   build:
+    runs-on: ubuntu-latest
     steps:
       - name: Get repo code
         uses: actions/checkout@v3
