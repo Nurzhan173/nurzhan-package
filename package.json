@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Nurzhan173/nurzhan-package#readme",
   "devDependencies": {
     "eslint": "^8.47.0",
-    "eslint-config-react-app": "^7.0.1"
+    "eslint-config-react-app": "^7.0.1",
+    "jsdoc": "^4.0.2"
   }
 }

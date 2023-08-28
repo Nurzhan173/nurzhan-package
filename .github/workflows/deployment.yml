@@ -30,5 +30,11 @@ jobs:
         run: npm ci
       - name: Deploy
         run: echo Deploying...
+      - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.MY_SECRET }}
+        publish_dir: ./docs
+
 
 
