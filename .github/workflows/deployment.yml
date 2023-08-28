@@ -30,11 +30,14 @@ jobs:
         run: npm ci
       - name: Deploy
         run: echo Deploying...
+  release-docs:
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.MY_SECRET }}
-        publish_dir: ./docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.MY_SECRET }}
+          publish_dir: ./docs
 
 
 
