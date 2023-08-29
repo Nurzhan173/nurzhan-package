@@ -32,6 +32,7 @@ jobs:
         run: npx jsdoc components -d ./docs
 
   release-docs:
+    needs: [install, build-docs]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
