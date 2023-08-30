@@ -38,6 +38,26 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
 
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repo code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: build docs
+        run: npx jsdoc -c jsdoc.conf.json
+
+  release-docs:
+    needs: [ install, build-docs ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.MY_SECRET }}
+          publish_dir: ./docs
+
   # Deployment job
   deploy:
     environment:
