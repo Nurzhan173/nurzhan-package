@@ -33,6 +33,7 @@ jobs:
 
   # Build
   build:
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -49,7 +50,7 @@ jobs:
 
   # Build docs
   build-docs:
-    needs: install-dependencies
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Get repo code
