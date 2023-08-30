@@ -49,7 +49,7 @@ jobs:
         run: npx jsdoc -c jsdoc.conf.json
 
   release-docs:
-    needs: [ install, build-docs ]
+    needs: [ build, build-docs ]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
