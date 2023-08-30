@@ -38,7 +38,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
 
+  # Build docs
   build-docs:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Get repo code
@@ -48,23 +50,13 @@ jobs:
       - name: build docs
         run: npx jsdoc -c jsdoc.conf.json
 
-  release-docs:
-    needs: [ build, build-docs ]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.MY_SECRET }}
-          publish_dir: ./docs
-
   # Deployment job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: build-docs
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
