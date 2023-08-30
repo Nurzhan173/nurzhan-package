@@ -1,0 +1,12 @@
+{
+  "source": {
+    "include": [
+      "components/Modal/modal.js",
+      "components/Skeleton/skeleton.js",
+      "components/Tooltip/tooltip.js"
+    ]
+  },
+  "opts": {
+    "destination": "./docs"
+  }
+}

@@ -1,5 +1,17 @@
 /* eslint-disable */
 
+/**
+ * @module Tooltip
+ */
+
+/**
+ * Функция, складывающая два числа.
+ *
+ * @param {function} onclick - onClick
+ * @param {number} b - Второе число.
+ * @returns {number} Сумма двух чисел.
+ */
+
 class Tooltip {
 
   constructor() {

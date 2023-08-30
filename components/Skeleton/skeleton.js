@@ -1,5 +1,20 @@
 /* eslint-disable */
 
+/* eslint-disable */
+
+/**
+ * @module Skeleton
+ */
+
+/**
+ * Функция, складывающая два числа.
+ *
+ * @param {function} onclick - onClick
+ * @param {number} b - Второе число.
+ * @returns {number} Сумма двух чисел.
+ */
+
+
 class Skeleton {
   render() {
     const skeleton = document.createElement('div');
