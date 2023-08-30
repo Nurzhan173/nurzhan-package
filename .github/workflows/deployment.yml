@@ -60,9 +60,9 @@ jobs:
       - name: build docs
         run: npx jsdoc -c jsdoc.conf.json
       - name: Publish NPM package
-        run: npm publish
-        env:
-          NPM_CONFIG_TOKEN: ${{ secrets.MY_SECRET }}
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=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
+          npm install .  # установка пакета, включая документацию
 
   # Deployment job
   deploy:
