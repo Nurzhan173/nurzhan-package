@@ -60,7 +60,9 @@ jobs:
       - name: build docs
         run: npx jsdoc -c jsdoc.conf.json
       - name: Publish to npm
-        run: npm publish
+          run: |
+            echo "//registry.npmjs.org/:_authToken=\${secrets.MY_SECRET}" > .npmrc
+            npm publish 
 
   # Deployment job
   deploy:
