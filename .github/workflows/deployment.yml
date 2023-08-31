@@ -52,6 +52,8 @@ jobs:
   build-docs-and-publish:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      packages: create
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
