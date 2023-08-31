@@ -15,7 +15,11 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Nurzhan173/nurzhan-package/issues"
-  },  "homepage": "https://github.com/Nurzhan173/nurzhan-package#readme",
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "homepage": "https://github.com/Nurzhan173/nurzhan-package#readme",
   "devDependencies": {
     "eslint": "^8.47.0",
     "eslint-config-react-app": "^7.0.1",
