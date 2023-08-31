@@ -60,7 +60,7 @@ jobs:
       - run: npm ci
       - uses: JS-DevTools/npm-publish@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           registry: "https://npm.pkg.github.com"
 #      - uses: actions/checkout@v3
 #      # Setup .npmrc file to publish to npm
