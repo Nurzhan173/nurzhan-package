@@ -60,6 +60,11 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@nurzhan173'
 
+      - name: Configure Git
+        run: |
+          git config user.email "nurzhann173@gmail.com"
+          git config user.name "nurzhan173"
+
       # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v3
         with:
