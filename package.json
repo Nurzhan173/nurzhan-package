@@ -1,6 +1,6 @@
 {
-  "name": "@Nurzhan173/nurzhan-package",
-  "version": "1.0.9",
+  "name": "@nurzhan/nurzhan-package",
+  "version": "1.0.10",
   "description": "package ",
   "main": "index.js",
   "scripts": {
@@ -15,11 +15,7 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Nurzhan173/nurzhan-package/issues"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "homepage": "https://github.com/Nurzhan173/nurzhan-package#readme",
+  },  "homepage": "https://github.com/Nurzhan173/nurzhan-package#readme",
   "devDependencies": {
     "eslint": "^8.47.0",
     "eslint-config-react-app": "^7.0.1",
