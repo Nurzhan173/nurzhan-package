@@ -7,7 +7,7 @@
 /**
  * Функция, складывающая два числа.
  *
- * @param {function} onclick - onClick
+ * @param {function} onclick - onClick callback
  * @param {number} b - Второе число.
  * @returns {number} Сумма двух чисел.
  */
