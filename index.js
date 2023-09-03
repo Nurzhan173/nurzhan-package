@@ -1,5 +1,5 @@
-import debounce from './debounce';
-import requester from './requester';
+import debounce from 'utils/debounce';
+import requester from 'utils/requester';
 
 module.exports = debounce;
 module.exports = requester;
