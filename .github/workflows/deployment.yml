@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build docs
-        run: npm run generate-docs
+        run: npx jsdoc -c jsdoc.conf.json
 
   # npm publish
   npm-publish:
