@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint ./components"
+    "lint": "npx eslint ./components",
+    "generate-docs": "npx jsdoc -c jsdoc.conf.json"
   },
   "repository": {
     "type": "module",

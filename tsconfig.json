@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Целевая версия JavaScript
+    "module": "CommonJS", // Формат модулей (для Node.js)
+    "outDir": "./dist", // Директория, в которую будут скомпилированы TypeScript файлы
+    "strict": true, // Включить строгий режим TypeScript
+    "esModuleInterop": true,// Включить интероперабельность с CommonJS модулями
+    "allowJs": true
+  },
+  "include": ["src/**/*.ts"], // Путь к исходным файлам TypeScript
+  "exclude": ["node_modules"] // Исключить папку node_modules
+}
