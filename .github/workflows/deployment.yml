@@ -52,8 +52,11 @@ jobs:
   build-docs:
     - needs: build
     - runs-on: ubuntu-latest
-
     steps:
+      - name: Get repo code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
       - name: build docs
         run: npm run generate-docs
 
