@@ -22,8 +22,11 @@
   },
   "homepage": "https://github.com/Nurzhan173/nurzhan-package#readme",
   "devDependencies": {
+    "@types/node": "^20.5.9",
     "eslint": "^8.47.0",
     "eslint-config-react-app": "^7.0.1",
-    "jsdoc": "^4.0.2"
+    "jsdoc": "^4.0.2",
+    "typedoc": "^0.25.1",
+    "typescript": "^5.2.2"
   }
 }

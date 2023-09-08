@@ -1,10 +1,11 @@
 {
   "source": {
     "include": [
-      "components/Modal/modal.js",
-      "components/Skeleton/skeleton.js",
-      "components/Tooltip/tooltip.js"
-    ]
+      "components/Modal/modal.ts",
+      "components/Skeleton/skeleton.ts",
+      "components/Tooltip/tooltip.ts"
+    ],
+    "includePattern": ".(jsx|js|ts|tsx)$"
   },
   "opts": {
     "destination": "./docs"
