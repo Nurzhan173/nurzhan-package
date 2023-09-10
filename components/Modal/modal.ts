@@ -1,6 +1,25 @@
+
+/* eslint-disable */
+
+/* eslint-disable */
+
+/**
+ * @module Skeleton
+ */
+
+/**
+ * Функция, складывающая два числа.
+ *
+ * @param {function} onclick - onClick
+ * @param {number} b - Второе число.
+ * @returns {number} Сумма двух чисел.
+ */
+
+
 class Modal {
-  private modalElement: HTMLElement;
-  private closeModalBtn: HTMLElement;
+
+  modalElement;
+  closeModalBtn;
 
   constructor() {
     this.modalElement = document.createElement('div');
@@ -43,4 +62,4 @@ class Modal {
   }
 }
 
-export default Modal;
+module.exports = Modal;

@@ -1,6 +1,6 @@
 {
-  "name": "@Nurzhan173/nurzhan-package",
-  "version": "1.1.1",
+  "name": "@nurzhan173/nurzhan-package",
+  "version": "1.1.2",
   "description": "package ",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "url": "https://github.com/Nurzhan173/nurzhan-package/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "@nurzhan:registry": "https://npm.pkg.github.com"
   },
   "homepage": "https://github.com/Nurzhan173/nurzhan-package#readme",
   "devDependencies": {
