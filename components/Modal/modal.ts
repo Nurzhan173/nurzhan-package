@@ -1,58 +1,46 @@
-/* eslint-disable */
-
-/**
- * @module Modal
- */
-
-/**
- * Функция, складывающая два числа.
- *
- * @param {function} onclick - onClick
- * @param {number} b - Второе число.
- * @returns {number} Сумма двух чисел.
- */
-
 class Modal {
+  private modalElement: HTMLElement;
+  private closeModalBtn: HTMLElement;
+
   constructor() {
-    // function closeModal() {
-    //   modal.style.display = 'none';
-    // }
+    this.modalElement = document.createElement('div');
+    this.modalElement.className = 'modal';
+    this.modalElement.style.display = 'none';
 
-    window.onclick = function(event) {
-      if (event.target === modal) {
-        window.modal.style.display = 'none';
-      }
-    }
+    this.closeModalBtn = document.createElement('span');
+    this.closeModalBtn.className = 'close-btn';
+    this.closeModalBtn.innerText = '×';
 
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") {
-        modal.style.display = 'none';
+    const modalContent = document.createElement('div');
+    modalContent.className = 'modal-content';
+    modalContent.innerHTML = `
+            <h2>Модальное окно</h2>
+            <p>Содержимое модального окна здесь.</p>
+        `;
+
+    modalContent.appendChild(this.closeModalBtn);
+    this.modalElement.appendChild(modalContent);
+
+    document.body.appendChild(this.modalElement);
+
+    this.closeModalBtn.addEventListener('click', () => {
+      this.close();
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target === this.modalElement) {
+        this.close();
       }
     });
   }
 
-  render() {
-    const modal = document.createElement("div");
-    const closeButton = document.createElement("span");
-    const modalContent = document.createElement("div");
+  open() {
+    this.modalElement.style.display = 'block';
+  }
 
-    modal.id = "modal";
-    modal.className = "modal";
-
-    closeButton.className="close";
-    closeButton.textContent = "x";
-    closeButton.addEventListener("click", () => {
-      window.modal.style.display = 'none';
-    })
-
-    modalContent.id = "modal-content";
-    modalContent.className = "modal-content";
-
-    modal.appendChild(closeButton);
-    modal.appendChild(modalContent);
-
-    return modal;
+  close() {
+    this.modalElement.style.display = 'none';
   }
 }
 
-module.exports = Modal;
+export default Modal;
