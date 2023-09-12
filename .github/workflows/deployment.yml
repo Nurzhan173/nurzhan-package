@@ -81,7 +81,7 @@ jobs:
         with:
           node-version: 'v16.13.2'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@nurzhan173'
+          scope: '@nurzhan'
 
       - name: Authenticate with the GitHub Package Registry
         run:
@@ -92,54 +92,6 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
-#      # Setup .npmrc file to publish to npm
-#           - uses: actions/setup-node@v3
-#           with:
-#             node-version: 'v16.13.2'
-#             registry-url: 'https://registry.npmjs.org'
-#             scope: '@jamesives'
-#
-#           - name: Configure Git
-#             run: |
-#               git config user.email "iam@jamesiv.es"
-#               git config user.name "James Ives"
-#    steps:
-#      - uses: actions/checkout@v3
-#      - uses: actions/setup-node@v3
-#      with:
-#        node-version: "18"
-#      - run: npm ci
-#      - uses: JS-DevTools/npm-publish@v2
-#        with:
-#          token: ${{ secrets.GH_TOKEN }}
-#          registry: "https://npm.pkg.github.com"
-#      - uses: actions/checkout@v3
-#      # Setup .npmrc file to publish to npm
-#      - uses: actions/setup-node@v3
-#        with:
-#          node-version: '16.x'
-#          registry-url: 'https://registry.npmjs.org'
-#      - run: npm ci
-#      - uses: JS-DevTools/npm-publish@v2
-#        with:
-#          token: ${{ secrets.GITHUB_TOKEN }}
-#          registry: "https://npm.pkg.github.com"
-#      - run: npm publish
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-#          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-#    steps:
-#      - name: Get repo code
-#        uses: actions/checkout@v3
-#      - name: Install dependencies
-#        run: npm ci
-#      - name: build docs
-#        run: npx jsdoc -c jsdoc.conf.json
-#      - name: Publish NPM package
-#        run: |
-#          npm config set //registry.npmjs.org/:_authToken=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
-#          npm publish
 
   # Deployment job
   deploy:
