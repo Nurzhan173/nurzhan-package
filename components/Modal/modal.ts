@@ -18,10 +18,22 @@
 
 class Modal {
 
-  modalElement;
-  closeModalBtn;
+  private modalElement: HTMLElement;
+  private closeModalBtn: HTMLElement;
+  private title: string;
+  private content: string;
 
-  constructor() {
+
+  constructor(title: string, content: string) {
+    this.title = title;
+    this.content = content;
+
+    const titleElement = document.createElement('h2');
+    titleElement.innerText = this.title;
+
+    const contentElement = document.createElement('p');
+    contentElement.innerText = this.content;
+
     this.modalElement = document.createElement('div');
     this.modalElement.className = 'modal';
     this.modalElement.style.display = 'none';
@@ -32,12 +44,10 @@ class Modal {
 
     const modalContent = document.createElement('div');
     modalContent.className = 'modal-content';
-    modalContent.innerHTML = `
-            <h2>Модальное окно</h2>
-            <p>Содержимое модального окна здесь.</p>
-        `;
-
+    modalContent.appendChild(titleElement);
+    modalContent.appendChild(contentElement);
     modalContent.appendChild(this.closeModalBtn);
+
     this.modalElement.appendChild(modalContent);
 
     document.body.appendChild(this.modalElement);
