@@ -1,6 +1,6 @@
 {
-  "name": "@nurzhan/nurzhan-pkg",
-  "version": "1.1.7",
+  "name": "nurzhan-pkg",
+  "version": "1.1.10",
   "description": "package ",
   "main": "index.js",
   "scripts": {
