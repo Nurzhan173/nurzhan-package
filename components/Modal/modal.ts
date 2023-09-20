@@ -1,32 +1,32 @@
-
-/* eslint-disable */
-
-/* eslint-disable */
-
 /**
- * @module Skeleton
+ * @module Modal
  */
-
-/**
- * Функция, складывающая два числа.
- *
- * @param {function} onclick - onClick
- * @param {number} b - Второе число.
- * @returns {number} Сумма двух чисел.
- */
-
 
 class Modal {
 
-  private modalElement: HTMLElement;
-  private closeModalBtn: HTMLElement;
-  private title: string;
-  private content: string;
+  /**
+   * @param {{title: boolean, content: string}} modal
+   */
+
+  title;
+  content;
+
+  /**
+   * modal wrapper
+   * @type {HTMLElement}
+   */
+  modalElement;
+
+  /**
+   * close button
+   * @type {HTMLElement}
+   */
+  closeModalBtn;
 
 
-  constructor(title: string, content: string) {
-    this.title = title;
-    this.content = content;
+  constructor(modal) {
+    this.title = modal.title;
+    this.content = modal.content;
 
     const titleElement = document.createElement('h2');
     titleElement.innerText = this.title;
