@@ -58,12 +58,12 @@ jobs:
         run: npx jsdoc -c jsdoc.conf.json
 
   # npm publish
-  npm-publish:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-    steps:
+#  npm-publish:
+#    needs: build
+#    runs-on: ubuntu-latest
+#    permissions:
+#      packages: write
+#    steps:
 #      - uses: actions/checkout@v3
 #      - uses: actions/setup-node@v3
 #        with:
@@ -90,17 +90,17 @@ jobs:
 
       # Publish to GitHub Packages
 
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 'v16.13.2'
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          token: ${{ secrets.NPM_TOKEN }}
+#      - uses: actions/checkout@v2
+#      - uses: actions/setup-node@v1
+#        with:
+#          node-version: 'v16.13.2'
+#          registry-url: https://registry.npmjs.org/
+#      - run: npm ci
+#      - run: npm publish --access public
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#          token: ${{ secrets.NPM_TOKEN }}
 
   # Deployment job
   deploy:
