@@ -2,13 +2,25 @@
  * @module Modal
  */
 
+/**
+ * Component Modal.
+ *
+ * @param {{title: string, content: string}} modal
+ */
+
+
 class Modal {
 
   /**
-   * @param {{title: boolean, content: string}} modal
+   * title
+   * @type {string}
    */
-
   title;
+
+  /**
+   * content
+   * @type {string}
+   */
   content;
 
   /**

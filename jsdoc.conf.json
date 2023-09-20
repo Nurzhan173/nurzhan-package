@@ -1,11 +1,14 @@
 {
   "source": {
     "include": [
-      "components/Modal/modal.ts",
-      "components/Skeleton/skeleton.ts",
-      "components/Tooltip/tooltip.ts"
+      "components/Modal/modal.ts"
     ],
     "includePattern": ".(jsx|js|ts|tsx)$"
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
   },
   "opts": {
     "destination": "./docs"
