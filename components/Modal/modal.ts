@@ -36,9 +36,9 @@ class Modal {
   closeModalBtn;
 
 
-  constructor(modal) {
-    this.title = modal.title;
-    this.content = modal.content;
+  constructor(title: string, content: string) {
+    this.title = title;
+    this.content = content;
 
     const titleElement = document.createElement('h2');
     titleElement.innerText = this.title;
