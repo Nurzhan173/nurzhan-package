@@ -1,3 +1,5 @@
+import './modal.css';
+
 /**
  * @module Modal
  */
@@ -84,4 +86,4 @@ class Modal {
   }
 }
 
-module.exports = Modal;
+export default Modal;

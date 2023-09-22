@@ -1,5 +1,4 @@
-/* eslint-disable */
-
+import './tooltip.css';
 /**
  * @module Tooltip
  */
@@ -45,4 +44,4 @@ class Tooltip {
   }
 }
 
-module.exports = Tooltip;
+export default Tooltip;

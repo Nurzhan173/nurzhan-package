@@ -1,6 +1,4 @@
-/* eslint-disable */
-
-/* eslint-disable */
+import './skeleton.css';
 
 /**
  * @module Skeleton
@@ -49,4 +47,4 @@ class Skeleton {
   }
 }
 
-module.exports = Skeleton;
+export default Skeleton;
