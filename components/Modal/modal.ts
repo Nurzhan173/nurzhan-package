@@ -38,7 +38,7 @@ class Modal {
   closeModalBtn;
 
 
-  constructor(title: string, content: string) {
+  constructor(title, content) {
     this.title = title;
     this.content = content;
 
