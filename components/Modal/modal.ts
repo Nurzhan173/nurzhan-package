@@ -4,11 +4,6 @@ import './modal.css';
  * @module Modal
  */
 
-/**
- * Component Modal.
- *
- * @param {{title: string, content: string}} modal
- */
 
 
 class Modal {
@@ -37,6 +32,13 @@ class Modal {
    */
   closeModalBtn;
 
+
+  /**
+   * Component Modal.
+   *
+   * @param title {string}
+   * @param content {string}
+   */
 
   constructor(title, content) {
     this.title = title;
