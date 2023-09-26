@@ -5,16 +5,18 @@ import './skeleton.css';
  */
 
 /**
- * Функция, складывающая два числа.
  *
- * @param {function} onclick - onClick
- * @param {number} b - Второе число.
- * @returns {number} Сумма двух чисел.
+ * @param {Object} styles - need to pass styles for skeleton
+ * @returns {HTMLElement} - returns Skeleton
  */
 
 
 class Skeleton {
 
+  /**
+   * title
+   * @type {Object}
+   */
   styles;
 
   constructor(styles) {
@@ -31,7 +33,6 @@ class Skeleton {
     const itemFragment = document.createDocumentFragment();
     const cardFragment = document.createDocumentFragment();
 
-    skeletonWraper.className = 'skeleton';
     skeletonItemWrapper.className = 'skeleton-item-wrapper';
     skeletonItem.className = 'skeleton-item';
     skeletonHeader.className = 'skeleton-header';

@@ -1,7 +1,3 @@
-.skeleton {
-  display: none;
-}
-
 .skeleton-item-wrapper {
   display: flex;
   gap: 10px;

@@ -4,11 +4,11 @@ import './tooltip.css';
  */
 
 /**
- * Функция, складывающая два числа.
- *
- * @param {function} onclick - onClick callback
- * @param {number} b - Второе число.
- * @returns {number} Сумма двух чисел.
+ * Need to create div element with id #tooltip
+ * for text inside tooltip need to create div with id #tooltipText
+ * @type {HTMLElement} tooltip - tooltip div wrapper
+ * @type {HTMLElement} tooltipText - tooltip text
+ * @returns {HTMLElement} returns tooltip
  */
 
 class Tooltip {
