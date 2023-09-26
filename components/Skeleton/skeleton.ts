@@ -14,8 +14,15 @@ import './skeleton.css';
 
 
 class Skeleton {
+
+  styles;
+
+  constructor(styles) {
+    this.styles = styles;
+  }
+
   render() {
-    const skeleton = document.createElement('div');
+    const skeletonWraper = document.createElement('div');
     const skeletonItemWrapper = document.createElement('div');
     const skeletonItem = document.createElement('div');
     const skeletonHeader = document.createElement('div');
@@ -24,7 +31,7 @@ class Skeleton {
     const itemFragment = document.createDocumentFragment();
     const cardFragment = document.createDocumentFragment();
 
-    skeleton.className = 'skeleton';
+    skeletonWraper.className = 'skeleton';
     skeletonItemWrapper.className = 'skeleton-item-wrapper';
     skeletonItem.className = 'skeleton-item';
     skeletonHeader.className = 'skeleton-header';
@@ -35,15 +42,17 @@ class Skeleton {
 
     skeletonItem.appendChild(itemFragment)
 
+    skeletonWraper.style.color = this.styles.color;
+
     for(let i = 0; i < 4; i++){
       cardFragment.append(skeletonItem);
     }
 
     skeletonItemWrapper.appendChild(cardFragment);
 
-    skeleton.appendChild(skeletonItemWrapper);
+    skeletonWraper.appendChild(skeletonItemWrapper);
 
-    return skeleton;
+    return skeletonWraper;
   }
 }
 
