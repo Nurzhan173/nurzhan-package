@@ -113,8 +113,5 @@
     "outDir": "./dist", // Adjust the output directory as needed
 
     "baseUrl": "./components", // Adjust the base URL as needed
-
-    "incl"
-
   }
 }

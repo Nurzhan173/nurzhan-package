@@ -28,9 +28,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+  # Run tests
+  run-tests:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repo code
+        uses: actions/checkout@v3
+      - name: Run unit tests
+        run: npm tun tests
+
   # Build
   build:
-    needs: install
+    needs: run-tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

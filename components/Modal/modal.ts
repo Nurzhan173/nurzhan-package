@@ -40,7 +40,7 @@ class Modal {
    * @param content {string}
    */
 
-  constructor(title, content) {
+  constructor(title: string, content: string) {
     this.title = title;
     this.content = content;
 

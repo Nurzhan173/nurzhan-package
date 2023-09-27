@@ -1,10 +1,10 @@
 {
   "name": "nurzhan-pkg",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "package ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "npx eslint ./components",
     "generate-docs": "npx jsdoc -c jsdoc.conf.json"
   },
@@ -22,11 +22,20 @@
   },
   "homepage": "https://github.com/Nurzhan173/nurzhan-package#readme",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.23.0",
+    "@testing-library/dom": "^9.3.3",
     "@types/node": "^20.5.9",
     "eslint": "^8.47.0",
     "eslint-config-react-app": "^7.0.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "jsdoc": "^4.0.2",
+    "ts-jest": "^29.1.1",
     "typedoc": "^0.25.1",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "identity-obj-proxy": "^3.0.0",
+    "jsdom": "^22.1.0"
   }
 }
