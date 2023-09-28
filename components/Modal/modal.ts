@@ -34,12 +34,10 @@ class Modal {
 
 
   /**
-   * Component Modal.
    *
    * @param title {string}
    * @param content {string}
    */
-
   constructor(title, content) {
     this.title = title;
     this.content = content;

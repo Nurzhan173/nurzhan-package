@@ -10,4 +10,8 @@ module.exports = {
     '\\.css$': 'identity-obj-proxy',
   },
   testEnvironment: 'jsdom',
+  moduleFileExtensions: ['ts', 'js', 'json', 'node'],
+  collectCoverage: true,
+  clearMocks: true,
+  coverageDirectory: "coverage",
 }
