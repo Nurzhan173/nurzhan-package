@@ -36,7 +36,7 @@ jobs:
       - name: Get repo code
         uses: actions/checkout@v3
       - name: Run unit tests
-        run: npm tun tests
+        run: npm run test
 
   # Build
   build:
