@@ -53,7 +53,7 @@ All files     |   83.33 |        0 |      90 |   83.09 |
 ## Documentation
 For detailed documentation and examples, please visit the GitHub Pages for this project:
 
-Project Documentation: https://nurzhan173.github.io/nurzhan-package/docs/index.html
+Project Documentation: [https://nurzhan173.github.io/nurzhan-package/docs](https://nurzhan173.github.io/nurzhan-package/docs/index.html)
 
 ## NPM
-NPM link: https://www.npmjs.com/package/nurzhan-pkg
+NPM link: [https://www.npmjs.com/package/nurzhan-pkg](https://www.npmjs.com/package/nurzhan-pkg)
