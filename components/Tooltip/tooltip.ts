@@ -15,8 +15,8 @@ class Tooltip {
 
   constructor() {
     window.addEventListener('scroll', function() {
-      const tooltip = document.getElementById('tooltip');
-      const tooltipText = document.getElementById('tooltipText');
+      const tooltip = document.getElementById('tooltip')!;
+      const tooltipText = document.getElementById('tooltipText')!;
       const tooltipRect = tooltip.getBoundingClientRect();
 
       if(tooltipRect.top < 50) {
