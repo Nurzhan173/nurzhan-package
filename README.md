@@ -1,6 +1,6 @@
 # nurzhan-page
 
-Testing project for learning
+Library with custom ui components
 
 ## Table of Contents
 
@@ -8,6 +8,8 @@ Testing project for learning
 - [Installation](#installation)
 - [Running Tests](#running-tests)
 - [Documentation](#documentation)
+- [NPM Link](#npm)
+
 
 ## Components
 
@@ -35,6 +37,7 @@ To get started with this project, follow these steps:
 To run unit tests for this project, you can use the following command:
 ```sh
 npm run test
+```
 
 Coverage:
 ```sh
@@ -52,4 +55,5 @@ For detailed documentation and examples, please visit the GitHub Pages for this 
 
 Project Documentation: https://nurzhan173.github.io/nurzhan-package/docs/index.html
 
-
+## NPM
+NPM link: https://www.npmjs.com/package/nurzhan-pkg
