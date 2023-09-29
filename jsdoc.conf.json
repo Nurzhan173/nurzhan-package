@@ -2,7 +2,7 @@
   "source": {
     "include": [
       "components/Modal/modal.ts",
-      "components/Skeleton/skeleton.ts",
+      "components/Skeleton/skeleton.ts"
     ],
     "includePattern": ".(jsx|js|ts|tsx)$"
   },
