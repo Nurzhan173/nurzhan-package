@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip Tooltip renders a div element with the correct id 1`] = `Tooltip {}`;

@@ -18,6 +18,7 @@ describe('Tooltip', () => {
     const renderedTooltip = tooltip.render();
     expect(renderedTooltip.tagName).toBe('DIV');
     expect(renderedTooltip.id).toBe('tooltip');
+    expect(tooltip).toMatchSnapshot();
   });
 
   // You can add more tests here to cover other aspects of your Tooltip class

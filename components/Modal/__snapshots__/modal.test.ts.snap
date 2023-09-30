@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Component modal should be hidden initially 1`] = `
+Modal {
+  "closeModalBtn": <span
+    class="close-btn"
+  />,
+  "content": "Test Content",
+  "modalElement": <div
+    class="modal"
+    style="display: none;"
+  >
+    <div
+      class="modal-content"
+    >
+      <h2 />
+      <p />
+      <span
+        class="close-btn"
+      />
+    </div>
+  </div>,
+  "title": "Test Title",
+}
+`;
+
+exports[`Modal Component modal should show when open() is called 1`] = `
+Modal {
+  "closeModalBtn": <span
+    class="close-btn"
+  />,
+  "content": "Test Content",
+  "modalElement": <div
+    class="modal"
+    style="display: block;"
+  >
+    <div
+      class="modal-content"
+    >
+      <h2 />
+      <p />
+      <span
+        class="close-btn"
+      />
+    </div>
+  </div>,
+  "title": "Test Title",
+}
+`;

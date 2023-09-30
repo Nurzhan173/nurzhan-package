@@ -7,6 +7,8 @@ describe('Skeleton', () => {
     const styles = { color: 'blue' };
     const skeleton = new Skeleton(styles);
 
+    expect(skeleton).toMatchSnapshot();
+
     const renderedSkeleton = skeleton.render();
 
     const skeletonItems = renderedSkeleton.querySelectorAll('.skeleton-item');

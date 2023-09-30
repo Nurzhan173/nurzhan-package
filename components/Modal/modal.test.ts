@@ -15,11 +15,13 @@ describe('Modal Component', () => {
   });
 
   test('modal should be hidden initially', () => {
+    expect(modal).toMatchSnapshot();
     expect(modal.modalElement.style.display).toBe('none');
   });
 
   test('modal should show when open() is called', () => {
     modal.open();
+    expect(modal).toMatchSnapshot();
     expect(modal.modalElement.style.display).toBe('block');
   });
 

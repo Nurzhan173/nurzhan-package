@@ -1,4 +1,4 @@
-# nurzhan-page
+# nurzhan-package
 
 Library with custom ui components
 
