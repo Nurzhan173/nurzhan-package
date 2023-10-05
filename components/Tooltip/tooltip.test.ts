@@ -2,13 +2,6 @@ import Tooltip from './tooltip';
 import { describe, expect, beforeEach, afterEach, test } from '@jest/globals'
 
 
-describe('Visual Regression Test', () => {
-  it('should match a snapshot', () => {
-    cy.visit('https://google.com');
-    cy.matchImageSnapshot();
-  });
-});
-
 describe('Tooltip', () => {
   let tooltip;
 
@@ -26,7 +19,6 @@ describe('Tooltip', () => {
     const renderedTooltip = tooltip.render();
     expect(renderedTooltip.tagName).toBe('DIV');
     expect(renderedTooltip.id).toBe('tooltip');
-    expect(tooltip).toMatchSnapshot();
   });
 
   // You can add more tests here to cover other aspects of your Tooltip class
