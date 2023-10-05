@@ -49,6 +49,7 @@ All files     |   83.33 |        0 |      90 |   83.09 |
  Tooltip      |      45 |        0 |   66.66 |      45 |
   tooltip.ts  |      45 |        0 |   66.66 |      45 | 15-26
 ```
+more info: [coverage page](https://nurzhan173.github.io/nurzhan-package/coverage/lcov-report/index.html)
 
 ## Documentation
 For detailed documentation and examples, please visit the GitHub Pages for this project:
