@@ -6,6 +6,8 @@ on:
   push:
     branches: ["master"]
 
+ # need to create dev branch pipline
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -28,18 +30,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-  # Run tests
-  run-tests:
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get repo code
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm ci
-      - name: Run unit tests
-        run: npm run test
-
   # Run eslint
   lint:
     needs: install
@@ -52,9 +42,23 @@ jobs:
       - name: Run eslint
         run: npm run lint
 
+  # Run tests
+  run-tests:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repo code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Run unit tests
+        run: npm run test
+
+# add e2e test
+
   # Build
   build:
-    needs: [run-tests, lint]
+    needs: run-tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -80,51 +84,6 @@ jobs:
         run: npm ci
       - name: build docs
         run: npm run generate-docs
-
-  # npm publish
-#  npm-publish:
-#    needs: build
-#    runs-on: ubuntu-latest
-#    permissions:
-#      packages: write
-#    steps:
-#      - uses: actions/checkout@v3
-#      - uses: actions/setup-node@v3
-#        with:
-#          node-version: 'v16.13.2'
-#          registry-url: 'https://registry.npmjs.org'
-#          scope: '@nurzhan173'
-#
-#      - name: Configure Git
-#        run: |
-#          git config user.email "nurzhann173@gmail.com"
-#          git config user.name "nurzhan173"
-#
-#      # Setup .npmrc file to publish to GitHub Packages
-#      - uses: actions/setup-node@v3
-#        with:
-#          node-version: 'v16.13.2'
-#          registry-url: 'https://npm.pkg.github.com'
-#          scope: '@nurzhan'
-
-#      - name: Authenticate with the GitHub Package Registry
-#        run:
-#          echo "//npm.pkg.github.com:_authToken=${{ secrets.GH_TOKEN }}" >
-#          ~/.npmrc
-
-      # Publish to GitHub Packages
-
-#      - uses: actions/checkout@v2
-#      - uses: actions/setup-node@v1
-#        with:
-#          node-version: 'v16.13.2'
-#          registry-url: https://registry.npmjs.org/
-#      - run: npm ci
-#      - run: npm publish --access public
-#        env:
-#          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-#          token: ${{ secrets.NPM_TOKEN }}
 
   # Deployment job
   deploy:
