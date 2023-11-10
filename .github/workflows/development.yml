@@ -4,7 +4,7 @@ name: Deployment
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["develop"]
+    branches: ["master"]
 
   # need to create dev branch pipline
 
@@ -54,9 +54,10 @@ jobs:
       - name: Run unit tests
         run: npm run test
 
+  # run e2e tests
   run-end-to-end:
     needs: run-tests
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Get repo code
         uses: actions/checkout@v3
